@@ -14,7 +14,7 @@ root = tree.getroot()
 basePos = np.array([0.0,0.0,0.0])
 
 for f in filesName:
-	if(f.split('.')[1] == 'JPG'):
+	if(f.split('.')[1].lower() == 'jpg'):
 			pics.append(f)
 
 def toFloat(s):

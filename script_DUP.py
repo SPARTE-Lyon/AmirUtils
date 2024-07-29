@@ -15,7 +15,7 @@ filesName = os.listdir(folderDir)
 pics = []
 
 for f in filesName:
-	if(f.split('.')[1] == 'JPG'):
+	if(f.split('.')[1].lower() == 'jpg'):
 			pics.append(f)
 
 pics = list(map(isolate, pics))
@@ -29,13 +29,13 @@ for uk in unique_key:
 		except:
 			pass
 		try:
-			shutil.move(folderDir + uk + 'LRR.JPG', folderUniqueDir + uk + 'LRR.JPG')
-			print(uk + f'LRR.JPG moved to {folderUniqueDir}')
+			shutil.move(folderDir + uk + 'LRR.jpg', folderUniqueDir + uk + 'LRR.jpg')
+			print(uk + f'LRR.jpg moved to {folderUniqueDir}')
 		except:
 			pass
 		try:
-			os.remove(folderDir + uk + 'LRL.JPG')
-			print(uk + f'LRL.JPG moved to {folderUniqueDir}')
+			os.remove(folderDir + uk + 'LRL.jpg')
+			print(uk + f'LRL.jpg moved to {folderUniqueDir}')
 		except:
 			pass
 
