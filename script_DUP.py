@@ -9,7 +9,7 @@ def isolate(s):
 
 
 print('Folder name:')
-folderDir = f'./sources/{input()}/'
+folderDir = f'{input()}/'
 
 filesName = os.listdir(folderDir)
 pics = []

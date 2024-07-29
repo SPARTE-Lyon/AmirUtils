@@ -2,7 +2,7 @@ import os
 import shutil
 
 print('Folder name:')
-folderDir = f'./sources/{input()}/'
+folderDir = f'{input()}/'
 picsName = os.listdir(folderDir)
 LRL = folderDir[:-1] + '_LRL/'
 LRR = folderDir[:-1] + '_LRR/'

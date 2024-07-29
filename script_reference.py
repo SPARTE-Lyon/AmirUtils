@@ -4,7 +4,8 @@ import xml.etree.ElementTree as ET
 import csv
 import math
 
-folderDir = f'./sources/{input()}/'
+print('Folder name:')
+folderDir = f'{input()}/'
 filesName = os.listdir(folderDir)
 pics = []
 
@@ -36,7 +37,7 @@ def euler_from_quaternion(w, x, y, z):
 
         return math.degrees(roll_x), math.degrees(pitch_y), math.degrees(yaw_z)
 
-with open('./sources/data_references_three.csv', 'w', newline='') as file:
+with open(f'{folderDir}data_references_three.csv', 'w', newline='') as file:
 	writer = csv.writer(file)
 	for child in root.iter():
 		if child.tag == 'couple':
